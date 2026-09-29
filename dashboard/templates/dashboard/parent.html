@@ -1,0 +1,42 @@
+{% extends 'dashboard/base.html' %}
+{% block content %}
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="col-span-1 glass-panel p-8 flex flex-col items-center">
+        <h2 class="text-2xl font-bold mb-6 text-indigo-300">Pair New Device</h2>
+        <div class="w-48 h-48 bg-white rounded-xl mb-6 p-2 flex items-center justify-center">
+            <!-- Placeholder for actual QR code from API -->
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=family-connect-demo-123" alt="QR Code" class="rounded-lg opacity-80" />
+        </div>
+        <p class="text-sm text-gray-400 text-center mb-6">Ask your child to scan this QR code using the FamilyConnect app to pair.</p>
+        <button class="w-full py-3 bg-indigo-600 hover:bg-indigo-500 rounded-xl font-semibold transition">Generate New Code</button>
+    </div>
+    
+    <div class="col-span-2 flex flex-col gap-8">
+        <div class="glass-panel p-8 hover-lift border-l-4 border-emerald-500">
+            <div class="flex justify-between items-start">
+                <div>
+                    <h3 class="text-2xl font-bold">Timmy's iPad</h3>
+                    <p class="text-emerald-400 flex items-center gap-2 mt-1">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Online
+                    </p>
+                </div>
+                <button class="px-4 py-2 bg-red-500/20 text-red-400 rounded-lg hover:bg-red-500/40 transition">Unlink Device</button>
+            </div>
+            
+            <div class="grid grid-cols-3 gap-4 mt-8">
+                <div class="bg-gray-800/50 p-4 rounded-xl text-center">
+                    <p class="text-gray-400 text-sm">Files Shared</p>
+                    <p class="text-2xl font-semibold">14</p>
+                </div>
+                <div class="bg-gray-800/50 p-4 rounded-xl text-center">
+                    <p class="text-gray-400 text-sm">Screen Share</p>
+                    <p class="text-2xl font-semibold text-emerald-400">Allowed</p>
+                </div>
+                <div class="bg-gray-800/50 p-4 rounded-xl text-center cursor-pointer hover:bg-indigo-600/30 transition">
+                    <p class="text-gray-400 text-sm mt-2">Request Screen</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

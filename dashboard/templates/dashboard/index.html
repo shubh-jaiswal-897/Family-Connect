@@ -1,0 +1,17 @@
+{% extends 'dashboard/base.html' %}
+{% block content %}
+<div class="text-center space-y-8 animate-fade-in-up">
+    <h1 class="text-6xl font-extrabold glow-text">Secure Family Management</h1>
+    <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+        Empower parents and protect children with consent-based remote device management. Connect devices securely with a simple QR scan.
+    </p>
+    <div class="flex justify-center gap-6 mt-12">
+        <a href="/parent/" class="hover-lift glass-panel px-10 py-5 text-xl font-semibold flex items-center gap-3 bg-indigo-600/20 hover:bg-indigo-600/40 border-indigo-500/30">
+            I am a Parent
+        </a>
+        <a href="/child/" class="hover-lift glass-panel px-10 py-5 text-xl font-semibold flex items-center gap-3 bg-emerald-600/20 hover:bg-emerald-600/40 border-emerald-500/30">
+            I am a Child
+        </a>
+    </div>
+</div>
+{% endblock %}
